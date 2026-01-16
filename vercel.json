@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "quiz-backend/index.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "quiz-app/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "quiz-app/dist"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "quiz-backend/index.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "quiz-app/dist/$1",
+      "methods": ["GET", "HEAD"],
+      "status": 200
+    }
+  ]
+}
