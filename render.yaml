@@ -4,7 +4,7 @@ services:
     runtime: node
     region: oregon
     plan: free
-    root: quiz-backend
+    rootDir: quiz-backend
     buildCommand: npm install
     startCommand: node index.js
     envVars:
