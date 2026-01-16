@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "/courses",
+  baseURL: "https://quiz-theta-peach.vercel.app",
   headers: {
     "x-api-key": "12345",
   },

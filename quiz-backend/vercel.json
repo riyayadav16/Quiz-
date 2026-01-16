@@ -1,24 +1,15 @@
 {
   "version": 2,
-  "buildCommand": "cd ../quiz-app && npm install && npm run build && cd ../quiz-backend",
   "builds": [
     {
       "src": "api/handler.js",
       "use": "@vercel/node"
-    },
-    {
-      "src": "../quiz-app/dist/**",
-      "use": "@vercel/static"
     }
   ],
   "routes": [
     {
-      "src": "/courses(.*)",
-      "dest": "api/handler.js"
-    },
-    {
       "src": "/(.*)",
-      "dest": "../quiz-app/dist/$1"
+      "dest": "api/handler.js"
     }
   ]
 }
