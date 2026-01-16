@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://quiz-2woom4i72-riya-yadavs-projects-29ff28d4.vercel.app",
+  baseURL: "/courses",
   headers: {
     "x-api-key": "12345",
   },

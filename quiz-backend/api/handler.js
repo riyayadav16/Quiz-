@@ -3,12 +3,20 @@ import bodyParser from "body-parser";
 import cors from "cors";
 import fs from "fs";
 import path from "path";
+import { fileURLToPath } from "url";
 
 const app = express();
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // Middleware
 app.use(cors());
 app.use(bodyParser.json());
+
+// Serve static files from frontend dist folder
+const distPath = path.join(__dirname, "../../quiz-app/dist");
+if (fs.existsSync(distPath)) {
+  app.use(express.static(distPath));
+}
 
 // API Key Middleware
 const apiKeyMiddleware = (req, res, next) => {
@@ -153,6 +161,16 @@ app.get("/courses/:id/progress/:userId", (req, res) => {
 
   const progress = userProgress.filter(up => up.userId === userId && up.courseId === id);
   res.json({ courseId: id, userId, progress });
+});
+
+// Serve index.html for all non-API routes (SPA routing)
+app.get("*", (req, res) => {
+  const indexPath = path.join(__dirname, "../../quiz-app/dist/index.html");
+  if (fs.existsSync(indexPath)) {
+    res.sendFile(indexPath);
+  } else {
+    res.status(404).json({ message: "Not found" });
+  }
 });
 
 export default app;
