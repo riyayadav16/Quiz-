@@ -1,0 +1,119 @@
+{
+  "courses": [
+    {
+      "id": "c1",
+      "title": "Frontend Basics",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "HTML Quiz",
+          "questions": [
+            {
+              "question": "What does HTML stand for?",
+              "options": [
+                "Hyper Trainer Marking Language",
+                "Hyper Text Markup Language",
+                "Home Tool Markup Language"
+              ],
+              "answer": 1
+            },
+            {
+              "question": "Which tag is used for a paragraph?",
+              "options": [
+                "<p>",
+                "<para>",
+                "<paragraph>"
+              ],
+              "answer": 0
+            },
+            {
+              "question": "Which attribute is used for hyperlinks?",
+              "options": [
+                "src",
+                "href",
+                "link"
+              ],
+              "answer": 1
+            },
+            {
+              "question": "HTML files are saved with which extension?",
+              "options": [
+                ".html",
+                ".htm",
+                "Both"
+              ],
+              "answer": 2
+            },
+            {
+              "question": "What is the correct way to insert an image?",
+              "options": [
+                "<img src='img.png'>",
+                "<image src='img.png'>",
+                "<pic src='img.png'>"
+              ],
+              "answer": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "userProgress": [
+    {
+      "userId": "u7513",
+      "courseId": "c1",
+      "lessonId": "l1",
+      "answers": [
+        {
+          "questionIndex": 0,
+          "selectedOption": 0
+        },
+        {
+          "questionIndex": 1,
+          "selectedOption": 1
+        },
+        {
+          "questionIndex": 2,
+          "selectedOption": 2
+        },
+        {
+          "questionIndex": 3,
+          "selectedOption": 2
+        },
+        {
+          "questionIndex": 4,
+          "selectedOption": 0
+        }
+      ],
+      "score": 2
+    },
+    {
+      "userId": "u1086",
+      "courseId": "c1",
+      "lessonId": "l1",
+      "answers": [
+        {
+          "questionIndex": 0,
+          "selectedOption": 1
+        },
+        {
+          "questionIndex": 1,
+          "selectedOption": 0
+        },
+        {
+          "questionIndex": 2,
+          "selectedOption": 1
+        },
+        {
+          "questionIndex": 3,
+          "selectedOption": 0
+        },
+        {
+          "questionIndex": 4,
+          "selectedOption": 0
+        }
+      ],
+      "score": 4
+    }
+  ]
+}
